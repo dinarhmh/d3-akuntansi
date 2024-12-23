@@ -4,28 +4,6 @@
     <head>
         <meta charset="utf-8">
         <title>Akuntansi D3</title>
-        <style>
-            .bg-video {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                z-index: -1;
-            }
-        
-            .header-carousel-item {
-                position: relative;
-                height: 100vh; 
-                overflow: hidden;
-            }
-        
-            .carousel-caption {
-                position: relative;
-                z-index: 2;
-            }
-        </style>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
@@ -50,6 +28,65 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            table, th, td {
+                border: 1px solid black !important;
+            }
+            th, td {
+                padding: 10px;
+                text-align: left;
+            }
+            .warna {
+                background-color: #2A3D66;
+            }
+            .konsentrasi {
+                background-color: #7ebaff;
+            }
+
+            .semester-table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            .semester-table th, .semester-table td {
+                padding: 8px 12px;
+                border: 1px solid #ddd;
+                text-align: left;
+            }
+            /* General Styling for the Semester Header */
+            .semester-header {
+                cursor: pointer;
+                background-color: #007BFF; /* Blue background */
+                color: white; /* White text */
+                font-size: 18px; /* Larger text for better readability */
+                text-align: left; /* Align text to the left */
+                padding: 12px 20px; /* Padding for spacing */
+                transition: background-color 0.3s; /* Smooth transition effect */
+            }
+
+            /* Hover Effect to highlight the semester header */
+            .semester-header:hover {
+                background-color: #0056b3; /* Darker blue when hovered */
+            }
+
+            /* Custom class for the title inside the header */
+            .semester-title {
+                font-weight: bold;
+                font-size: 20px; /* Slightly larger text for emphasis */
+                letter-spacing: 1px; /* Adds spacing between letters */
+            }
+
+            .semester-content {
+                display: none;
+            }
+            .semester-content.show {
+                display: table-row-group;
+            }
+        </style>
     </head>
 
     <body>
@@ -59,7 +96,6 @@
                 <img src="img/wa.png" alt="WhatsApp">
             </a>
         </div>
-      
 
 
 
@@ -157,13 +193,14 @@
 
                             <a href="https://pmb.digitechuniversity.ac.id/" class="nav-item nav-link">Informasi PMB</a>
 
+
                         </div>
                     </div>
                 </nav>
             </div>
         </div>
         <!-- Navbar & Hero End -->
-         
+
 
         <!-- Modal Search Start -->
         <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -185,188 +222,20 @@
         <!-- Modal Search End -->
 
 
-        <!-- Carousel Start -->
-        <div class="header-carousel">
-            <div class="header-carousel-item">
-                <!-- Video Background Start -->
-                <video autoplay muted loop playsinline class="bg-video">
-                    <source src="img/view drone.mp4" type="video/mp4">
-                </video>
-                <!-- Video Background End -->
-                <div class="carousel-caption d-flex align-items-center justify-content-center">
-                    <div class="container">
-                        <div class="row g-4 align-items-center">
-                            <!-- Optional Content Overlay -->
-                            <div class="col-12 text-center">
-                                <h1 class="display-4 mb-4 text-white">Selamat Datang</h1>
-                                <h1 class="display-4 mb-4 text-white">Di Program Studi Akuntansi D3</h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-        <!-- Carousel End -->
-
-
-
-
-        <!-- Service Start -->
-        <div class="container-fluid service py-5">
-            <div class="container py-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h1 class="display-4 mb-4">Kegiatan Prodi</h1>
-                </div>
-                <div class="row g-4 justify-content-center">
-                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="service-item">
-                            <a href="kegiatan_prodi/frima.html">
-                            <div class="service-img">
-                                <img src="img/kegiatan prodi/frima.jpeg" class="img-fluid rounded-top w-100" alt="">
-                            </div>
-                            <div class="service-content p-4">
-                                <div class="service-content-inner">
-                                    <div class="d-inline-block h4 mb-4">Frima Universitas Teknologi Digital</div>
-                                    <h6>Selengkapnya</h6>
-                                </div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="service-item">
-                            <a href="kegiatan_prodi/aptisi.html">
-                            <div class="service-img">
-                                <img src="img/kegiatan prodi/aptisi.jpeg" class="img-fluid rounded-top w-100" alt="">
-                            </div>
-                            <div class="service-content p-4">
-                                <div class="service-content-inner">
-                                    <div class="d-inline-block h4 mb-4">Kegiatan Aptisi (Asosiasi Perguruan Tinggi Swasta...</div>
-                                    <h6>Selengkapnya</h6>
-                                </div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
-                        <div class="service-item">
-                            <a href="kegiatan_prodi/mou graha.html">
-                            <div class="service-img">
-                                <img src="img/kegiatan prodi/mou graha.jpeg" class="img-fluid rounded-top w-100" alt="">
-                            </div>
-                            <div class="service-content p-4">
-                                <div class="service-content-inner">
-                                    <div class="d-inline-block h4 mb-4">MoU GRHA Yustisia Law & Mediation Office</div>
-                                    <h6>Selengkapnya</h6>
-                                </div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.2s">
-                        <a class="btn btn-primary rounded-pill py-3 px-5" href="kegiatan_prodi.html">Lihat Kegiatan Prodi Lainnya</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Service End -->
 
         <!-- Blog Start -->
-        
-        <!-- Blog End --> 
-
-        <br><br>
-
-
-
-        <div id="brxe-znwdkv" class="brxe-container">
-            <div id="brxe-oyconz" class="brxe-block">
-                <img width="270" class="brxe-image css-filter size-full" alt="" id="brxe-jvjdez" decoding="async" data-type="string" sizes="(max-width: 935px) 100vw, 935px"
-                src="img/cyberlaw.png"></div>
-                <div id="brxe-yoltuk" class="brxe-block">
-                    <h1 id="brxe-zeemvp" class="brxe-heading">STAR (Study and Accounting Research)</h1>
-                    <div id="brxe-wtyavb" class="brxe-text">
-                        <p style="font-size: 15px; color: rgb(54, 54, 54); text-align: justify;">
-                            Jurnal STAR merupakan wadah untuk mengembangkan dan mempublikasikan berbagai hasil kajian bidang Ilmu Ekonomi, 
-                            khususnya Ilmu Akuntansi dan Bisnis. Jurnal ini dirancang untuk diterbitkan 3 kali dalam setahun (4 bulanan). 
-                            Demi menjaga konsistensi penerbitan jurnal ini, redaksi mengundang sidang pembaca dari berbagai pihak, baik 
-                            dosen, mahasiswa, peneliti, maupun praktisi untuk berpartisipasi mengisinya melalui tulisan baik berupa 
-                            karangan, ringkasan hasil penelitian, maupun resensi yang sesuai dengan tujuan dan misi dari jurnal ini..</p>
-                    </div>
-                    <div id="brxe-vpbcqu" class="brxe-container">
-                        <a id="brxe-undgzk" class="btn btn-primary rounded-pill py-2 px-4" href="https://jurnalstar.digitechuniversity.ac.id/index.php/jurnalstar" target="_blank">Lihat Jurnal</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <br><br><br><br><br><br>
-
-        
-
-        <!-- Contact Start -->
-        <div class="container-fluid contact bg-light py-5">
+        <div class="container-fluid blog py-5">
             <div class="container py-5">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h1 class="display-4 mb-4">Tentang Kami</h1>
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 1000px;">
+                    <h1 class="display-4 mb-4">DAFTAR MATAKULIAH</h1>
                     <h4 class="text-primary">Akuntansi D3</h4>
-                </div>
-                    <div class="col-12">
-                        <div>
-                            <div class="row g-4">
-                                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-                                    <div class="contact-add-item d-flex align-items-center">
-                                        <div class="contact-icon text-primary me-3">
-                                            <i class="fas fa-map-marker-alt fa-2x"></i>
-                                        </div>
-                                        <div>
-                                            <h4>Kampus 1</h4>
-                                            <p class="mb-0" style="font-size: 15px; color: black;">
-                                                Jl. Cibogo indah III - Bodogol Rt.08/05 Kel. Mekarjaya Kec. Rancasari Kota Bandung - Jawa Barat
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>                                
-                                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-                                    <div class="contact-add-item d-flex align-items-center">
-                                        <div class="contact-icon text-primary me-3">
-                                            <i class="fas fa-map-marker-alt fa-2x"></i>
-                                        </div>
-                                        <div>
-                                            <h4>Kampus 2</h4>
-                                            <p class="mb-0" style="font-size: 15px; color: black;">Jl. Buah Batu No. 26 RT 003 RW 007 Kel. Burangrang Kec.Lengkong Kota Bandung - Jawa Barat 40262</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-                                    <div class="contact-add-item d-flex align-items-center">
-                                        <div class="contact-icon text-primary me-3">
-                                            <i class="fas fa-envelope fa-2x"></i>
-                                        </div>
-                                        <div>
-                                            <h4>Email</h4>
-                                            <p class="mb-0" style="font-size: 15px; color: black;">akuntansi-d3@digitechuniversity.ac.id</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> <br><br>
-                    <div class="col-12 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="rounded">
-                            <iframe class="rounded w-100" 
-                            style="height: 400px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.360386750404!2d107.6698907737914!3d-6.966742868211257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c280837656e9%3A0xd45bb4c51ca7a392!2sDigitech%20University%20(Universitas%20Teknologi%20Digital)!5e0!3m2!1sid!2sid!4v1723445813689!5m2!1sid!2sid">
-                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </div>
+                       
+                    
+
                 </div>
             </div>
         </div>
-        <!-- Contact End -->
-
-
-
+        <!-- Blog End -->
 
 
         <!-- Footer Start -->
@@ -385,7 +254,6 @@
                                             Program Studi Akuntansi D3 <br>
                                             <a href="https://digitechuniversity.ac.id/">Universitas Teknologi Digital</a>
                                         </p>
-                                        
                                     </div>
                                 </div>
                             </div>
@@ -409,7 +277,6 @@
         </div>
         <!-- Copyright End -->
 
-
         <!-- Back to Top -->
         <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
 
@@ -422,10 +289,20 @@
         <script src="lib/waypoints/waypoints.min.js"></script>
         <script src="lib/counterup/counterup.min.js"></script>
         <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
         
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+
+
+
+        <script>
+            function toggleSemester(semesterId) {
+                var semesterContent = document.getElementById(semesterId);
+                semesterContent.classList.toggle('show');
+            }
+        </script>
     </body>
 
 </html>
